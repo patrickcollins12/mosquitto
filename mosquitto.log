@@ -202,3 +202,85 @@
 2021-09-20T23:51:58: Client EasyMQTT-default-shortcut already connected, closing old connection.
 2021-09-20T23:51:58: New client connected from 159.196.162.13:50203 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
 2021-09-20T23:52:18: Client EasyMQTT-default-shortcut closed its connection.
+2021-09-21T00:08:34: Client auto-457BBFA6-41BE-49CE-7FD1-CEDAF7917351 disconnected.
+2021-09-21T00:10:06: New connection from 159.196.162.13:64384 on port 1883.
+2021-09-21T00:10:06: New client connected from 159.196.162.13:64384 as auto-C86EAFC2-40D6-FE0D-E0A4-511242B6994C (p2, c1, k60, u'patrick').
+2021-09-21T00:10:06: Client auto-C86EAFC2-40D6-FE0D-E0A4-511242B6994C disconnected.
+2021-09-21T00:10:11: New connection from 159.196.162.13:64387 on port 1883.
+2021-09-21T00:10:11: New client connected from 159.196.162.13:64387 as auto-95DA17C9-8DE7-4974-9E29-48B057AAE76E (p2, c1, k60, u'patrick').
+2021-09-21T00:10:11: Client auto-95DA17C9-8DE7-4974-9E29-48B057AAE76E disconnected.
+2021-09-21T00:10:20: New connection from 159.196.162.13:50212 on port 1883.
+2021-09-21T00:10:20: New client connected from 159.196.162.13:50212 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:10:23: New connection from 159.196.162.13:50213 on port 1883.
+2021-09-21T00:10:23: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:10:23: New client connected from 159.196.162.13:50213 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:10:30: New connection from 159.196.162.13:50215 on port 1883.
+2021-09-21T00:10:30: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:10:30: New client connected from 159.196.162.13:50215 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:11:50: Client EasyMQTT-default-shortcut closed its connection.
+2021-09-21T00:12:03: New connection from 159.196.162.13:50216 on port 1883.
+2021-09-21T00:12:03: New client connected from 159.196.162.13:50216 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:13:28: New connection from 159.196.162.13:50217 on port 1883.
+2021-09-21T00:13:28: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:13:28: New client connected from 159.196.162.13:50217 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:13:42: New connection from 159.196.162.13:50218 on port 1883.
+2021-09-21T00:13:42: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:13:42: New client connected from 159.196.162.13:50218 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:15:38: New connection from 159.196.162.13:50221 on port 1883.
+2021-09-21T00:15:38: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:15:38: New client connected from 159.196.162.13:50221 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:16:02: New connection from 159.196.162.13:50222 on port 1883.
+2021-09-21T00:16:02: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:16:02: New client connected from 159.196.162.13:50222 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:16:05: New connection from 159.196.162.13:50223 on port 1883.
+2021-09-21T00:16:05: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:16:05: New client connected from 159.196.162.13:50223 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:16:08: New connection from 159.196.162.13:50224 on port 1883.
+2021-09-21T00:16:08: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:16:08: New client connected from 159.196.162.13:50224 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:16:11: New connection from 159.196.162.13:50225 on port 1883.
+2021-09-21T00:16:11: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:16:11: New client connected from 159.196.162.13:50225 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:15: New connection from 159.196.162.13:50226 on port 1883.
+2021-09-21T00:17:15: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:15: New client connected from 159.196.162.13:50226 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:16: New connection from 159.196.162.13:50227 on port 1883.
+2021-09-21T00:17:16: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:16: New client connected from 159.196.162.13:50227 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:30: New connection from 159.196.162.13:50228 on port 1883.
+2021-09-21T00:17:30: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:30: New client connected from 159.196.162.13:50228 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:32: New connection from 159.196.162.13:50229 on port 1883.
+2021-09-21T00:17:32: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:32: New client connected from 159.196.162.13:50229 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:33: New connection from 159.196.162.13:50230 on port 1883.
+2021-09-21T00:17:33: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:33: New client connected from 159.196.162.13:50230 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:38: New connection from 159.196.162.13:50231 on port 1883.
+2021-09-21T00:17:38: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:38: New client connected from 159.196.162.13:50231 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:39: New connection from 159.196.162.13:50232 on port 1883.
+2021-09-21T00:17:39: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:39: New client connected from 159.196.162.13:50232 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:40: New connection from 159.196.162.13:50233 on port 1883.
+2021-09-21T00:17:40: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:40: New client connected from 159.196.162.13:50233 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:43: New connection from 159.196.162.13:50234 on port 1883.
+2021-09-21T00:17:43: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:43: New client connected from 159.196.162.13:50234 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:45: New connection from 159.196.162.13:50235 on port 1883.
+2021-09-21T00:17:45: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:45: New client connected from 159.196.162.13:50235 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:17:49: New connection from 159.196.162.13:50236 on port 1883.
+2021-09-21T00:17:49: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:17:49: New client connected from 159.196.162.13:50236 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:19:04: New connection from 159.196.162.13:50238 on port 1883.
+2021-09-21T00:19:04: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:19:04: New client connected from 159.196.162.13:50238 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:19:12: New connection from 159.196.162.13:50239 on port 1883.
+2021-09-21T00:19:12: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:19:12: New client connected from 159.196.162.13:50239 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:19:26: New connection from 159.196.162.13:50240 on port 1883.
+2021-09-21T00:19:26: Client EasyMQTT-default-shortcut already connected, closing old connection.
+2021-09-21T00:19:26: New client connected from 159.196.162.13:50240 as EasyMQTT-default-shortcut (p2, c1, k60, u'patrick').
+2021-09-21T00:20:58: Client EasyMQTT-default-shortcut has exceeded timeout, disconnecting.
