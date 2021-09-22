@@ -4,10 +4,11 @@ var mqtt = require('mqtt')
 const webapp = express()
 const webport = 1884
 
-var client  = mqtt.connect('mqtt://garagedoorpc.zapto.org:1883')
+var client  = mqtt.connect('mqtt://garagedoorpc.zapto.org', {port: 1884, username: )
 
 webapp.get('/', (req, res) => {
   res.send('Hello World!')
+  console.log(req);
   client.publish('/GarageDoor/Action', 'click')
 })
 
