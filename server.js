@@ -1,5 +1,7 @@
-// TODO: MQTT server needs auth
-// MQTT CLIENT SETUP
+// TODO:
+//  QOS 2 not working for some reason
+// get it daemon ready
+
 var mqtt = require('mqtt')
 const mqtthost = 'localhost'
 const mqttport = 1883
@@ -27,17 +29,14 @@ const express = require('express')
 const webapp = express()
 const webport = 1884
 
-webapp.get('/GarageOpen', (req, res) => {
-  res.send('Garage Opening')
-  client.publish('/GarageDoor/Action', 'open')
-})
-webapp.get('/GarageClose', (req, res) => {
-  res.send('Garage Closing')
-  client.publish('/GarageDoor/Action', 'close')
-})
-webapp.get('/GarageClick', (req, res) => {
-  res.send('Garage Click')
-  client.publish('/GarageDoor/Action', 'click')
+webapp.get('/GarageDoor', (req, res) => {
+  let opts = {}
+  if (req.query.qos) { opts.qos = req.query.qos }
+  if (req.query
+    .retain) { opts.retain = req.query.retain }
+  // console.log(opts)
+  res.send('OK')
+  client.publish(req.query.topic, req.query.payload, opts)
 })
 
 webapp.listen(webport, () => {
