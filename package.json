@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/patrickcollins12/mosquitto#readme",
   "dependencies": {
+    "aedes": "^0.46.1",
     "express": "^4.17.1",
     "mqtt": "^4.2.8"
   }
