@@ -79,3 +79,11 @@ aedes.on('subscribe', function (subscriptions, client) {
 aedes.on('client', function (client) {
   console.log('new client', client.id)
 })
+
+
+aedes.authenticate = function (client, username, password, callback) {
+  if( username == mqttuser && password == mqttpass) {
+    // console.log("Client Authenticated Successfully")
+    callback(null, true)
+  }
+}
