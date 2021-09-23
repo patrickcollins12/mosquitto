@@ -1,13 +1,3 @@
-// TODO:
-// get it daemon ready. must have.
-// eliminate mosquitto references
-
-// TODO - Nice to have.
-// QOS 2 not working for some reason
-// no error handling on publish fail
-// poor error handling on connect fail. e.g. timeouts just loop
-// user/pass on web. 
-// add https certificate. has ongoing maintenance attached.
 
 // MQTT Client Connect for Express to talk to
 var mqtt = require('mqtt')
