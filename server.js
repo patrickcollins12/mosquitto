@@ -1,5 +1,6 @@
 // TODO:
 // get it daemon ready. must have.
+// eliminate mosquitto references
 
 // TODO - Nice to have.
 // QOS 2 not working for some reason
