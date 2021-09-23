@@ -1,6 +1,7 @@
 # mqtt+webproxy
 
 // TODO:
+// remove the passwords from public
 // get it daemon ready. must have. DONE
 // eliminate mosquitto references. DONE
 

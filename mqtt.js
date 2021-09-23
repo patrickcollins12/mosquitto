@@ -76,13 +76,13 @@ aedes.on('publish', function (packet, client) {
     if (packet.qos) { pkt.qos = packet.qos}
     if (packet.retain) { pkt.retain = packet.retain}
     // console.log(packet)
-    console.log('message from client', pkt)
+    console.log('published ', pkt)
   } 
 })
 
 aedes.on('subscribe', function (subscriptions, client) {
   if (client) {
-    console.log('subscribe from client', subscriptions, client.id)
+    console.log('subscribed ', subscriptions, client.id)
   }
 })
 
