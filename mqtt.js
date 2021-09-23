@@ -1,38 +1,16 @@
-
-// MQTT Client Connect for Express to talk to
-var mqtt = require('mqtt')
-const mqtthost = 'localhost'
-const mqttport = 1883
-const mqttuser = "patrick"
-const mqttpass = "patrick2"
+require('dotenv').config()
 
 // add timestamps in front of log messages
 var strftime = require('strftime') // not required in browsers
 require('log-timestamp')(function() { 
   return '[' + strftime('%d-%m-%Y %H:%M:%S') + ']' })
 
-var client  = mqtt.connect('mqtt://'+mqtthost, 
-  { port: mqttport, 
-    username: mqttuser, 
-    password:mqttpass,
-    connectTimeout: 100
-  } )
-
-  client.on('connect', function () {
-    console.log("MQTT Client connected to MQTT broker");
-  })
-  
-  client.on('error', function (error) {
-    console.log("MQTT client connect fail: " + error);
-    // process.exit(1);
-  })
-
-
+console.log("=== Server startup ===")
 
 // WEB SERVER SETUP
 const express = require('express')
 const webapp = express()
-const webport = 1884
+// const webport = process.env.webport
 
 // URL FORMAT:
 // http://localhost:1884/mqtt?t=/GarageDoor/Command&m=click&retain=true&qos=1
@@ -42,14 +20,15 @@ webapp.get('/mqtt', (req, res) => {
   if (req.query.retain) { opts.retain = req.query.retain }
   // console.log(opts)
   // console.log(client)
+  console.log("webserver received " + req.url)
   client.publish(req.query.t, req.query.m, opts, function(err) {
     if (err) console.log(err)
     res.send('OK')
   })
 })
 
-webapp.listen(webport, () => {
-  console.log(`Webserver listening at ${webport}`)
+webapp.listen(process.env.webport, () => {
+  console.log(`Webserver listening at ${process.env.webport}`)
 })
 
 
@@ -59,8 +38,8 @@ const aedes = require('aedes')()
 const server = require('net').createServer(aedes.handle)
 // const port = 1883
 
-server.listen(mqttport, function () {
-  console.log('MQTT server started and listening on port ', mqttport)
+server.listen(process.env.mqttport, function () {
+  console.log('MQTT server started and listening on port ', process.env.mqttport)
 })
 
 aedes.on('clientError', function (client, err) {
@@ -93,10 +72,29 @@ aedes.on('client', function (client) {
 
 
 aedes.authenticate = function (client, username, password, callback) {
-  if( username == mqttuser && password == mqttpass) {
+  if( username == process.env.mqttuser && password == process.env.mqttpass) {
     // console.log("Client Authenticated Successfully")
     callback(null, true)
   } else {
     callback(null, false)
   }
 }
+
+// MQTT Client Connect for Express to talk to
+var mqtt = require('mqtt')
+
+var client  = mqtt.connect('mqtt://'+process.env.mqtthost, 
+{ port: process.env.mqttport, 
+  username: process.env.mqttuser, 
+  password: process.env.mqttpass,
+  connectTimeout: 100
+} )
+
+client.on('connect', function () {
+  // console.log("MQTT Client connected to MQTT broker");
+})
+
+client.on('error', function (error) {
+  console.log("MQTT client connect fail: " + error);
+  // process.exit(1);
+})
