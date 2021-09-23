@@ -7,19 +7,18 @@ require('log-timestamp')(function() {
 
 console.log("=== Server startup ===")
 
+///////////////////////////////////////////////
 // WEB SERVER SETUP
 const express = require('express')
 const webapp = express()
 // const webport = process.env.webport
 
-// URL FORMAT:
-// http://localhost:1884/mqtt?t=/GarageDoor/Command&m=click&retain=true&qos=1
+// URL FORMAT: http://localhost:1884/mqtt?t=/GarageDoor/Command&m=click&retain=true&qos=1
 webapp.get('/mqtt', (req, res) => {
   let opts = {}
   if (req.query.qos>0)    { opts.qos = req.query.qos }
   if (req.query.retain) { opts.retain = req.query.retain }
-  // console.log(opts)
-  // console.log(client)
+
   console.log("webserver received " + req.url)
   client.publish(req.query.t, req.query.m, opts, function(err) {
     if (err) console.log(err)
@@ -32,14 +31,14 @@ webapp.listen(process.env.webport, () => {
 })
 
 
-
+///////////////////////////////////////////////
 // SETUP THE AEDES MQTT SERVER
 const aedes = require('aedes')()
-const server = require('net').createServer(aedes.handle)
+const mqttserver = require('net').createServer(aedes.handle)
 // const port = 1883
 
-server.listen(process.env.mqttport, function () {
-  console.log('MQTT server started and listening on port ', process.env.mqttport)
+mqttserver.listen(process.env.mqttport, function () {
+  console.log('MQTT server listening on port', process.env.mqttport)
 })
 
 aedes.on('clientError', function (client, err) {
@@ -80,6 +79,7 @@ aedes.authenticate = function (client, username, password, callback) {
   }
 }
 
+///////////////////////////////////////////////
 // MQTT Client Connect for Express to talk to
 var mqtt = require('mqtt')
 
@@ -87,7 +87,7 @@ var client  = mqtt.connect('mqtt://'+process.env.mqtthost,
 { port: process.env.mqttport, 
   username: process.env.mqttuser, 
   password: process.env.mqttpass,
-  connectTimeout: 100
+  connectTimeout: 1000
 } )
 
 client.on('connect', function () {
