@@ -1,12 +1,24 @@
 // TODO:
-//  QOS 2 not working for some reason
-// get it daemon ready
+// get it daemon ready. must have.
 
+// TODO - Nice to have.
+// QOS 2 not working for some reason
+// no error handling on publish fail
+// poor error handling on connect fail. e.g. timeouts just loop
+// user/pass on web. 
+// add https certificate. has ongoing maintenance attached.
+
+// MQTT Client Connect for Express to talk to
 var mqtt = require('mqtt')
 const mqtthost = 'localhost'
 const mqttport = 1883
 const mqttuser = "patrick"
 const mqttpass = "patrick2"
+
+// add timestamps in front of log messages
+var strftime = require('strftime') // not required in browsers
+require('log-timestamp')(function() { 
+  return '[' + strftime('%d-%m-%Y %H:%M:%S') + ']' })
 
 var client  = mqtt.connect('mqtt://'+mqtthost, 
   { port: mqttport, 
@@ -24,24 +36,31 @@ var client  = mqtt.connect('mqtt://'+mqtthost,
     // process.exit(1);
   })
 
+
+
 // WEB SERVER SETUP
 const express = require('express')
 const webapp = express()
 const webport = 1884
 
-webapp.get('/GarageDoor', (req, res) => {
+// URL FORMAT:
+// http://localhost:1884/mqtt?t=/GarageDoor/Action&m=click&retain=true&qos=1
+webapp.get('/mqtt', (req, res) => {
   let opts = {}
-  if (req.query.qos) { opts.qos = req.query.qos }
-  if (req.query
-    .retain) { opts.retain = req.query.retain }
+  if (req.query.qos>0)    { opts.qos = req.query.qos }
+  if (req.query.retain) { opts.retain = req.query.retain }
   // console.log(opts)
-  res.send('OK')
-  client.publish(req.query.topic, req.query.payload, opts)
+  client.publish(req.query.t, req.query.m, opts, function(err) {
+    if (err) console.log(err)
+    res.send('OK')
+  })
 })
 
 webapp.listen(webport, () => {
   console.log(`Webserver listening at ${webport}`)
 })
+
+
 
 // SETUP THE AEDES MQTT SERVER
 const aedes = require('aedes')()
@@ -65,8 +84,9 @@ aedes.on('publish', function (packet, client) {
     pkt = {topic: packet.topic, payload: packet.payload.toString()}
     if (packet.qos) { pkt.qos = packet.qos}
     if (packet.retain) { pkt.retain = packet.retain}
+    // console.log(packet)
     console.log('message from client', pkt)
-  }
+  } 
 })
 
 aedes.on('subscribe', function (subscriptions, client) {
@@ -84,5 +104,7 @@ aedes.authenticate = function (client, username, password, callback) {
   if( username == mqttuser && password == mqttpass) {
     // console.log("Client Authenticated Successfully")
     callback(null, true)
+  } else {
+    callback(null, false)
   }
 }
