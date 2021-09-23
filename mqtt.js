@@ -75,8 +75,8 @@ aedes.on('publish', function (packet, client) {
     pkt = {topic: packet.topic, payload: packet.payload.toString()}
     if (packet.qos) { pkt.qos = packet.qos}
     if (packet.retain) { pkt.retain = packet.retain}
-    // console.log(packet)
-    console.log('published ', pkt)
+    // console.log(client)
+    console.log(client.id + ' published ', pkt)
   } 
 })
 
