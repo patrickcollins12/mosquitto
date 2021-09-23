@@ -35,12 +35,13 @@ const webapp = express()
 const webport = 1884
 
 // URL FORMAT:
-// http://localhost:1884/mqtt?t=/GarageDoor/Action&m=click&retain=true&qos=1
+// http://localhost:1884/mqtt?t=/GarageDoor/Command&m=click&retain=true&qos=1
 webapp.get('/mqtt', (req, res) => {
   let opts = {}
   if (req.query.qos>0)    { opts.qos = req.query.qos }
   if (req.query.retain) { opts.retain = req.query.retain }
   // console.log(opts)
+  // console.log(client)
   client.publish(req.query.t, req.query.m, opts, function(err) {
     if (err) console.log(err)
     res.send('OK')
