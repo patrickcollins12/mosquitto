@@ -1,7 +1,10 @@
-brew install mosquitto
+# brew install mosquitto
+# sh mosquitto.sh
+
 brew install node
-
-sh mosquitto.sh
-
 npm install
-node server.js &
+sudo npm install pm2 -g 
+pm2 start mqtt.js --name mqtt-garage
+pm2 startup # then run the command that comes after it.
+# or node mqtt.js &
+pm2 logs

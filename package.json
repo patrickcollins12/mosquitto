@@ -1,5 +1,5 @@
 {
-  "name": "mosquitto",
+  "name": "mqtt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,19 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickcollins12/mosquitto.git"
+    "url": "git+https://github.com/patrickcollins12/mqtt.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/patrickcollins12/mosquitto/issues"
+    "url": "https://github.com/patrickcollins12/mqtt/issues"
   },
-  "homepage": "https://github.com/patrickcollins12/mosquitto#readme",
+  "homepage": "https://github.com/patrickcollins12/mqtt#readme",
   "dependencies": {
     "aedes": "^0.46.1",
     "express": "^4.17.1",
     "log-timestamp": "^0.3.0",
     "mqtt": "^4.2.8",
+    "pm2": "^5.1.1",
     "strftime": "^0.10.0"
   }
 }
