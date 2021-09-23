@@ -56,7 +56,7 @@ aedes.on('publish', function (packet, client) {
     if (packet.qos) { pkt.qos = packet.qos}
     if (packet.retain) { pkt.retain = packet.retain}
     // console.log(client)
-    console.log(client.id + ' published ', pkt)
+    console.log(client.id + ' published ', JSON.stringify(pkt))
   } 
 })
 
