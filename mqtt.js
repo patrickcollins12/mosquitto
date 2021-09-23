@@ -62,7 +62,7 @@ aedes.on('publish', function (packet, client) {
 
 aedes.on('subscribe', function (subscriptions, client) {
   if (client) {
-    console.log('subscribed ', subscriptions, client.id)
+    console.log(client.id + 'subscribed ', subscriptions)
   }
 })
 
