@@ -38,7 +38,7 @@ const mqttserver = require('net').createServer(aedes.handle)
 // const port = 1883
 
 mqttserver.listen(process.env.mqttport, function () {
-  console.log('MQTT server listening on port', process.env.mqttport)
+  console.log('MQTT server listening on port ' + process.env.mqttport)
 })
 
 aedes.on('clientError', function (client, err) {
@@ -55,13 +55,13 @@ aedes.on('publish', function (packet, client) {
     if (packet.qos) { pkt.qos = packet.qos}
     if (packet.retain) { pkt.retain = packet.retain}
     // console.log(client)
-    console.log(client.id + ' published ', JSON.stringify(pkt))
+    console.log(client.id + ' published ' + JSON.stringify(pkt))
   } 
 })
 
 aedes.on('subscribe', function (subscriptions, client) {
   if (client) {
-    console.log(client.id + ' subscribed ', subscriptions)
+    console.log(client.id + ' subscribed ' + subscriptions)
   }
 })
 
