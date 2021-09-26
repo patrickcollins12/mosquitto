@@ -11,9 +11,7 @@
 
 
 # TODO
-- remove the passwords from public. DONE
-- get it daemon ready. must have. DONE
-- eliminate mosquitto references. DONE
+- remove these two specific references for watching /GD/DoorStatus
 
 ## TODO - Nice to have.
 - QOS 2 not working... web request is finishing and killing the thread before CONNACK is received. qos1 is fine for our needs

@@ -42,6 +42,9 @@ client.on('message', function (topic, message) {
 client.subscribe('/GD/Status', {qos:1}, function(err) {
   if (err) console.log(err)
 })
+client.subscribe('/GD/DoorStatus', {qos:1}, function(err) {
+  if (err) console.log(err)
+})
 
 ///////////////////////////////////////////////
 // WEB SERVER SETUP
