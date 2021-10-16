@@ -1,1 +1,0 @@
-{ "name": "garagedoor2", "~": "homeassistant/cover/garagedoor2", "device_class":"cover", "state_topic":"/homeassistant/cover/garagedoor2/state")

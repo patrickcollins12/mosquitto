@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/patrickcollins12/mqtt#readme",
   "dependencies": {
-    "aedes": "^0.46.1",
-    "aedes-persistence-redis": "^8.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "log-timestamp": "^0.3.0",
