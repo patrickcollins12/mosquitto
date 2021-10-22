@@ -8,6 +8,7 @@
 - pm2 start mqtt.js --name mqtt --watch
 - pm2 startup # then run the command that comes after it.
 - pm2 logs
+- install duckdns
 
 
 # TODO
